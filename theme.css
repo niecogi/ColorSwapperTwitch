@@ -347,6 +347,7 @@
     --primary-color-1: hsl(var(--primary-color-num),92%, 86%);
     --primary-color-1-1: hsla(var(--primary-color-num),92%, 86%, 0.25);
     --primary-color-2: hsl(var(--primary-color-num),92%,75%);
+    --primary-color-2-1: hsla(var(--primary-color-num),92%, 86%, 0.6);
     --primary-color-3: hsl(var(--primary-color-num),92%,70%);
     --primary-color-4: hsl(var(--primary-color-num),92%,65%);
 }
@@ -829,7 +830,7 @@
     --shadow-scrollbar: 0 0 1px 1px var(--color-opac-w-5);
 
 }
-.twitch-theme.tw-root--theme-dark, :root {
+.twitch-theme.tw-root--theme-dark{
     --color-fill-current: var(--primary-color-2);
     --color-background-accent: var(--primary-color-2);
     --color-background-button-brand: var(--primary-color-2);
@@ -858,28 +859,54 @@
     --color-fill-brand: var(--primary-color-2);
     --color-background-tag-default: var(--primary-color-1-1);
     --color-text-button: var(--primary-color-2);
---color-text-button-overlay-primary: var(--primary-color-2) ;
---color-background-button-primary-default: var(--primary-color-2) !important;
-
+    --color-text-button-overlay-primary: var(--primary-color-2) ;
     --color-background-graph-fill: var(--primary-color-2);
     --color-border-subscriber-stream-tag: var(--primary-color-2);
---color-background-input-checked: var(--primary-color-2);
+    --color-background-input-checked: var(--primary-color-2);
     --color-background-toggle-handle-checked: var(--primary-color-2);
     --color-background-accent-alt-2: var(--primary-color-3);
     --color-border-overlay-brand-decorative: var(--primary-color-1);
     --color-text-brand: var(--primary-color-2);
-
+    --color-border-input-hover: var(--primary-color-2);
+    --color-background-brand: var(--primary-color-2);
+    --color-border-brand: var(--primary-color-2);
 }
 
 .twitch-theme.tw-root--theme-dark .ScCoreButton-sc-1qn4ixc-0 ScCoreButtonPrimary-sc-1qn4ixc-1 ffyxRu dDxrgX svg{
     fill: var(--primary-color-1)
 }
+.twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0 gcwIMz InjectLayout-sc-588ddc-0 tw-drop-down-menu-item-figure svg{
+    fill: var(--primary-color-1)
+}
 
+.twitch-theme.tw-root--theme-dark [aria-label="User Menu Options"] svg {
+    fill: var(--primary-color-2);
+}
+
+.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"] svg {
+    width: 85px !important;
+    height: 85px !important;
+    fill: var(--color-white);
+}
+
+.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"] {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-2-1);
+
+}
 
 .twitch-theme.tw-root--theme-dark hr{
     border-color: var(--primary-color-1) !important;
 }
 
+.twitch-theme.tw-root--theme-dark .seekbar-bar > :nth-child(2) {
+    background: var(--primary-color-2) !important;
+}
 .twitch-theme.tw-root--theme-dark p:hover{
 }
 .twitch-theme.tw-root--theme-dark a::before{
@@ -891,14 +918,12 @@
     background-color:var(--primary-color-3) !important;
 
 }
-.twitch-theme.tw-root--theme-dark .navigation-link{
-
-}
 
 .twitch-theme.tw-root--theme-dark nav svg{
-    color: var(--primary-color-2) ;
+    fill: var(--primary-color-2);
 
 }
+
 .twitch-theme.tw-root--theme-dark .navigation-link:hover{
     color: var(--primary-color-4) !important;
 
