@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch colors",
+  "description": "colors",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches":["https://www.twitch.tv/*"],
+      "js": ["setTheme.js"],
+      "css": ["theme.css"]
+    }
+  ]
+}
