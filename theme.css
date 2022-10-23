@@ -2,7 +2,7 @@
 @import "twitch-light.css";
 
 :root {
-  --primary-color-num: 336;
+  --primary-color-num: 350;
   --primary-color-0: hsl(var(--primary-color-num), 92%, 95%);
   --primary-color-1: hsl(var(--primary-color-num), 92%, 86%);
   --primary-color-1-1: hsla(var(--primary-color-num), 92%, 86%, 0.25);

@@ -10,7 +10,7 @@ menuButton.addEventListener('click', () => {
     const stringHTML = `
      <div class="Layout-sc-nxg1ff-0 dwuicp">
       <div class="Layout-sc-nxg1ff-0 gcwIMz">
-      
+      HOLA QUE TAL
       </div>
     </div>
 `
