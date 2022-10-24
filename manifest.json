@@ -11,7 +11,7 @@
     {
       "matches":["https://www.twitch.tv/*","https://www.dashboard.twitch.tv/*" ],
       "js": ["setTheme.js"],
-      "css": ["theme.css"]
+      "css": ["hue.css", "theme.css"]
     }
   ]
 }

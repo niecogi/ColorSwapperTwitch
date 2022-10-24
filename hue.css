@@ -1,0 +1,108 @@
+.container{
+  position: relative;
+}
+
+#hue-range {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor:pointer;
+  left:0;
+  right:0;
+
+}
+#hue-canvas {
+  cursor: pointer;
+  position: absolute;
+  z-index: -1 !important;
+  display: block;
+}
+
+#hue-range  {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  color: transparent;
+  background-color: transparent;
+
+}
+#hue-range :focus {
+  outline: none;
+}
+#hue-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+#hue-range::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d, inset 0 0 2px #000000;
+  border: 0px solid #000000;
+  height: 25px;
+  width: 10px;
+  border-radius: 7px;
+  background: ghostwhite;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.6px;
+}
+#hue-range:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+#hue-range::-moz-range-track {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+#hue-range::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d, inset 0 0 2px #000000;
+  border: 0px solid #000000;
+  height: 25px;
+  width: 10px;
+  border-radius: 7px;
+  background: ghostwhite;
+  cursor: pointer;
+}
+#hue-range::-ms-track {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent;
+}
+#hue-range::-ms-fill-lower {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+#hue-range::-ms-fill-upper {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+#hue-range::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d, inset 0 0 2px #000000;
+  border: 0px solid #000000;
+  height: 25px;
+  width: 10px;
+  border-radius: 7px;
+  background: ghostwhite;
+  cursor: pointer;
+}
+#hue-range:focus::-ms-fill-lower {
+  background: #ac51b5;
+}
+#hue-range:focus::-ms-fill-upper {
+  background: #ac51b5;
+}

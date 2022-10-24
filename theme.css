@@ -1,6 +1,3 @@
-@import "twitch.css";
-@import "twitch-light.css";
-
 :root {
   --primary-color-num: 350;
   --primary-color-0: hsl(var(--primary-color-num), 92%, 95%);
