@@ -2,16 +2,20 @@
   --primary-color-num: 350;
   --primary-color-0: hsl(var(--primary-color-num), 92%, 95%);
   --primary-color-1: hsl(var(--primary-color-num), 92%, 86%);
-  --primary-color-1-1: hsla(var(--primary-color-num), 92%, 86%, 0.25);
+  --primary-color-1-alpha: hsla(var(--primary-color-num), 92%, 86%, 0.25);
   --primary-color-2: hsl(var(--primary-color-num), 92%, 75%);
-  --primary-color-2-1: hsla(var(--primary-color-num), 92%, 86%, 0.6);
+  --primary-color-2-alpha-9: hsla(var(--primary-color-num), 92%, 86%, 0.9);
+  --primary-color-2-alpha: hsla(var(--primary-color-num), 92%, 86%, 0.6);
   --primary-color-3: hsl(var(--primary-color-num), 92%, 70%);
   --primary-color-4: hsl(var(--primary-color-num), 92%, 65%);
   --primary-color-5: hsl(var(--primary-color-num), 100%, 19%);
+  --primary-color-6: hsl(var(--primary-color-num), 100%, 19%);
+  --primary-color-7: hsl(var(--primary-color-num), 100%, 35%);
+  --color-more-light: var(--primary-color-7);
 }
 
 .twitch-theme.tw-root--theme-dark,
-.twitch-theme .tw-root--theme-dark {
+.twitch-theme .tw-root--theme-dark{
   --color-fill-current: var(--primary-color-2);
   --color-background-accent: var(--primary-color-2);
   --color-background-button-brand: var(--primary-color-2);
@@ -36,9 +40,8 @@
   --color-background-pill-notification: var(--primary-color-4);
   --color-background-button-destructive-default: var(--primary-color-1);
   --color-background-button-destructive-active: var(--primary-color-1);
-  --color-background-button-secondary-default: var(--primary-color-1-1);
-  --color-fill-brand: var(--primary-color-2);
-  --color-background-tag-default: var(--primary-color-1-1);
+  --color-background-button-secondary-default: var(--primary-color-1-alpha);
+  --color-background-tag-default: var(--primary-color-1-alpha);
   --color-text-button: var(--primary-color-2);
   --color-text-button-overlay-primary: var(--primary-color-2);
   --color-background-graph-fill: var(--primary-color-2);
@@ -52,42 +55,77 @@
   --color-background-brand: var(--primary-color-2);
   --color-border-brand: var(--primary-color-2);
   --color-background-progress-status: var(--primary-color-2);
-  --color-background-info: var(--primary-color-1)
+  --color-background-info: var(--primary-color-1);
+  --color-text-overlay: var(--color-white)
+}
+.twitch-theme.tw-root--theme-light,
+.twitch-theme .tw-root--theme-light {
+  --color-fill-current: var(--primary-color-2);
+  --color-background-accent: var(--primary-color-2);
+  --color-background-button-brand: var(--primary-color-2);
+  --color-background-button-brand-hover: var(--primary-color-3);
+  --color-background-button-brand-active: var(--primary-color-3);
+  --color-background-tag-hover: var(--primary-color-3);
+  --color-text-button-overlay-text: var(--primary-color-2);
+  --color-background-progress-countdown-status: var(--primary-color-2);
+  --color-background-top-nav: var(--primary-color-2);
+  --color-text-link-hover: var(--primary-color-5);
+  --color-text-link-focus: var(--primary-color-4);
+  --color-text-link-visited: var(--color-more-light);
+  --color-text-link-active: var(--color-more-light);
+  --color-text-link: var(--color-more-light);
+  --color-border-toggle-checked: var(--primary-color-2);
+  --color-border-toggle-focus: var(--primary-color-2);
+  --color-border-toggle-overlay: var(--primary-color-2);
+  --color-text-toggle-checked-icon: var(--primary-color-2);
+  --color-border-toggle: var(--primary-color-3);
+  --color-background-pill-notification: var(--primary-color-4);
+  --color-background-button-destructive-default: var(--primary-color-1);
+  --color-background-button-destructive-active: var(--primary-color-1);
+  --color-background-button-secondary-default: var(--primary-color-1-alpha);
+  --color-background-tag-default: var(--primary-color-2-alpha-9);
+  --color-text-button: var(--primary-color-2);
+  --color-text-button-overlay-primary: var(--primary-color-2);
+  --color-background-graph-fill: var(--primary-color-2);
+  --color-border-subscriber-stream-tag: var(--primary-color-2);
+  --color-background-input-checked: var(--primary-color-2);
+  --color-background-toggle-handle-checked: var(--primary-color-2);
+  --color-background-accent-alt-2: var(--primary-color-3);
+  --color-border-overlay-brand-decorative: var(--primary-color-1);
+  --color-text-brand: var(--primary-color-5);
+  --color-border-input-hover: var(--primary-color-2);
+  --color-background-brand: var(--primary-color-2);
+  --color-border-brand: var(--primary-color-2);
+  --color-background-progress-status: var(--primary-color-2);
+  --color-background-info: var(--primary-color-1);
+  --color-text-overlay: var(--color-white)
 }
 
-.twitch-theme.tw-root--theme-dark .ScCoreButton-sc-1qn4ixc-0 ScCoreButtonPrimary-sc-1qn4ixc-1 ffyxRu dDxrgX svg {
-  fill: var(--primary-color-1)
-}
-
-.twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0 gcwIMz InjectLayout-sc-588ddc-0 tw-drop-down-menu-item-figure svg {
-  fill: var(--primary-color-1)
-}
-
-.twitch-theme.tw-root--theme-dark [aria-label="User Menu Options"] svg {
+.twitch-theme.tw-root--theme-dark [aria-label="User Menu Options"] svg,
+.twitch-theme.tw-root--theme-light [aria-label="User Menu Options"] svg {
   fill: var(--primary-color-2);
 }
 
-.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"] svg {
+.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"] svg,
+.twitch-theme.tw-root--theme-light [data-a-target="player-overlay-play-button"] svg {
   width: 85px !important;
   height: 85px !important;
-  fill: var(--color-white);
+  fill: var(--primary-color-6);
 }
 
 .twitch-theme.tw-root--theme-dark [ data-test-selector = "follow-button"] svg,
-.twitch-theme.tw-root--theme-dark [ data-test-selector = "subscribe-button__dropdown"] svg{
-  fill: var(--color-white) !important;
-  filter: drop-shadow(0.5px 0.5px 1.8px var(--primary-color-5))  !important
-
+.twitch-theme.tw-root--theme-dark [data-test-selector="follow-game-button-component"] svg,
+.twitch-theme.tw-root--theme-light [ data-test-selector = "follow-button"] svg,
+.twitch-theme.tw-root--theme-light [data-test-selector="follow-game-button-component"] svg {
+  fill: var(--primary-color-6) !important;
 }
-.twitch-theme.tw-root--theme-dark [aria-label="next"] svg{
+
+
+.twitch-theme.tw-root--theme-dark [aria-label="next"] svg,
+.twitch-theme.tw-root--theme-light [aria-label="next"] svg {
   fill: var(--primary-color-2)
 }
-.twitch-theme.tw-root--theme-dark [data-a-target="follow-button"],
-.twitch-theme.tw-root--theme-dark [data-test-selector="subscribe-button__dropdown"],
-.twitch-theme.tw-root--theme-dark [data-a-target="chat-send-button"]{
-  text-shadow: 1px 1px 5px var(--primary-color-5), 1px -1px 5px var(--primary-color-5) !important;
-  filter: drop-shadow(0.5px 0.5px 1.8px var(--primary-color-5))  !important
-}
+
 
 .twitch-theme.tw-root--theme-dark [data-test-selector="chat-reply-button"] svg {
   fill: var(--primary-color-2);
@@ -100,41 +138,71 @@
 
 
 
-.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"] {
+.twitch-theme.tw-root--theme-dark [data-a-target="player-overlay-play-button"],
+.twitch-theme.tw-root--theme-light [data-a-target="player-overlay-play-button"]{
   width: 120px !important;
   height: 120px !important;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color-2-1);
+  background-color: var(--primary-color-2-alpha);
 }
 
-.twitch-theme.tw-root--theme-dark hr {
+.twitch-theme.tw-root--theme-dark hr,
+.twitch-theme.tw-root--theme-light hr {
   border-color: var(--primary-color-1) !important;
 }
 
-.twitch-theme.tw-root--theme-dark .seekbar-bar > :nth-child(2) {
+.twitch-theme.tw-root--theme-dark .seekbar-bar > :nth-child(2),
+.twitch-theme.tw-root--theme-light .seekbar-bar > :nth-child(2){
   background: var(--primary-color-2) !important;
 }
 
-.twitch-theme.tw-root--theme-dark a::before {
+.twitch-theme.tw-root--theme-dark a::before,
+.twitch-theme.tw-root--theme-light a::before
+{
   color: var(--primary-color-1);
   border-color: var(--primary-color-1)
 }
 
-.twitch-theme.tw-root--theme-dark .navigation-link__active-indicator {
+.twitch-theme.tw-root--theme-dark .navigation-link__active-indicator,
+.twitch-theme.tw-root--theme-light .navigation-link__active-indicator{
   background-color: var(--primary-color-3) !important;
 }
 
-.twitch-theme.tw-root--theme-dark nav svg {
+.twitch-theme.tw-root--theme-dark nav svg,
+.twitch-theme.tw-root--theme-light nav svg{
   fill: var(--primary-color-2);
 }
 
-.twitch-theme.tw-root--theme-dark .navigation-link:hover {
+
+.twitch-theme.tw-root--theme-dark .navigation-link:hover,
+.twitch-theme.tw-root--theme-light .navigation-link:hover{
   color: var(--primary-color-4) !important;
 }
 
-.twitch-theme.tw-root--theme-dark .navigation-link.active {
+.twitch-theme.tw-root--theme-dark .navigation-link.active,
+.twitch-theme.tw-root--theme-light .navigation-link.active{
   color: var(--primary-color-3) !important;
 }
+
+.twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0.vertical-selector-card__container.vertical-selector-card__container--lg > a,
+.twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0.gZaqky > a{
+  color: var(--primary-color-6) !important;
+}
+
+/* Shadows
+.twitch-theme.tw-root--theme-dark [data-a-target="follow-button"],
+.twitch-theme.tw-root--theme-dark [data-test-selector="subscribe-button__dropdown"],
+.twitch-theme.tw-root--theme-dark [data-a-target="chat-send-button"]{
+  text-shadow: 1px 1px 5px var(--primary-color-5), 1px -1px 5px var(--primary-color-5) !important;
+  filter: drop-shadow(0.5px 0.5px 1.8px var(--primary-color-5))  !important
+}
+
+.twitch-theme.tw-root--theme-dark [ data-test-selector = "follow-button"] svg,
+.twitch-theme.tw-root--theme-dark [ data-test-selector = "subscribe-button__dropdown"] svg{
+  fill: var(--color-white) !important;
+  filter: drop-shadow(0.5px 0.5px 1.8px var(--primary-color-5))  !important
+}
+*/

@@ -4,7 +4,7 @@ const colorStored = localStorage.getItem('color-picked')
 
 
 if( colorStored !== undefined) {
-  r.style.setProperty('--primary-color-num', colorStored)
+ setColorPrimary(colorStored)
 }
 const menuButton = document.querySelector('[data-test-selector="user-menu__toggle"]')
 menuButton.addEventListener('click', () => {
@@ -52,16 +52,21 @@ menuButton.addEventListener('click', () => {
       range.onchange = () => onHuePicked(range.value)
       range.oninput = () => onHuePicked(range.value)
 
-      parent.appendChild(canvas)
-      parent.appendChild(range)
+function onHuePicked(hue) {
+  setColorPrimary(hue)
+  localStorage.setItem('color-picked', hue)
+}
 
-      function onHuePicked(hue) {
-        if(callback) {
-          callback(hue)
-        }
-      }
-    }
-  }, 300)
+function setColorPrimary(hue){
+  r.style.setProperty('--primary-color-num', hue)
+  if(hue <= 193 && hue >= 25 ){
+    r.style.setProperty('--color-text-button-primary', 'var(--primary-color-5)')
+    r.style.setProperty('--primary-color-6', 'var(--primary-color-5)')
+  }else{
+    r.style.setProperty('--color-text-button-primary', 'var(--color-white)')
+    r.style.setProperty('--primary-color-6', 'var(--color-white)')
+  }
+}
 
 
 })
