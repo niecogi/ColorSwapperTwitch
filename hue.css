@@ -1,5 +1,5 @@
 .container{
-  position: relative;
+  margin: 5px 5px 5px 5px;
 }
 
 #hue-range {
@@ -12,11 +12,7 @@
 
 
 }
-#hue-canvas {
-  cursor: pointer;
-  position: absolute;
-  z-index: -1 !important;
-  display: block;
+.hue{
   background: linear-gradient(
     90deg,
     hsla(0, 92%, 75%, 1),
