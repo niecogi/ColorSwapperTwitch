@@ -16,6 +16,7 @@ menuButton.addEventListener('click', () => {
     }
   }, 100)
 
+
   function render() {
     const menuWrapper = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')
     const darkThemeOption = menuWrapper.querySelector('.Layout-sc-nxg1ff-0.FTFzP').children[2]
@@ -53,7 +54,6 @@ menuButton.addEventListener('click', () => {
   }
 
 })
-
 
 function setColorPrimary(hue) {
   r.style.setProperty('--primary-color-num', hue)
