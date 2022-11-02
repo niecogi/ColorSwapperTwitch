@@ -114,8 +114,13 @@
 }
 
 .twitch-theme.tw-root--theme-light [class*="vertical-selector-card"] p,
-.twitch-theme .tw-root--theme-light [class*="vertical-selector-card"] p
-{
+.twitch-theme .tw-root--theme-light [class*="vertical-selector-card"] p,
+.twitch-theme .tw-root--theme-dark [class*="vertical-selector-card"] p,
+.twitch-theme.tw-root--theme-dark [class*="vertical-selector-card"] p,
+.twitch-theme.tw-root--theme-light [class*="tw-number-badge__badge"] ,
+.twitch-theme .tw-root--theme-light [class*="tw-number-badge__badge"] ,
+.twitch-theme .tw-root--theme-dark [class*="tw-number-badge__badge"] ,
+.twitch-theme.tw-root--theme-dark [class*="tw-number-badge__badge"]  {
   color:var(--primary-color-6)
 }
 
