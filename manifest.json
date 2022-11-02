@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Twitch colors",
-  "description": "Cute palette colors for Twitch light and dark theme in Chrome",
+  "name": "Color Swapper for Twitch™",
+  "description": "Replace Twich's purple with a color of your own liking.",
   "version": "1.0",
   "permissions": ["storage", "scripting"],
   "content_scripts": [

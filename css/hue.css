@@ -1,5 +1,6 @@
 .container{
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px !important;
+  padding: 0.5rem !important;
 }
 
 #hue-range {
@@ -9,10 +10,10 @@
   cursor:pointer;
   left:0;
   right:0;
-
-
 }
+
 .hue{
+  margin: 5px 5px 5px 5px !important;
   background: linear-gradient(
     90deg,
     hsla(0, 92%, 75%, 1),

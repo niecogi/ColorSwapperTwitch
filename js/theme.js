@@ -7,10 +7,10 @@ if (colorStored !== undefined) {
 const menuButton = document.querySelector('[data-test-selector="user-menu__toggle"]')
 
 menuButton.addEventListener('click', () => {
-  const myInterval = setInterval(() =>{
-    if(document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]') ){
+  const myInterval = setInterval(() => {
+    if (document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')) {
       clearInterval(myInterval)
-      if(!document.getElementById('hue-range')){
+      if (!document.getElementById('hue-range')) {
         render()
       }
     }
@@ -32,8 +32,6 @@ menuButton.addEventListener('click', () => {
     let range = document.createElement('input')
     range.id = 'hue-range'
     range.type = 'range'
-    range.style.width = `100%`
-    range.style.height = `30px`
     range.min = 0
     range.max = 360
     colorStored = localStorage.getItem('color-picked')
