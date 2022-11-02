@@ -5,8 +5,18 @@ if (colorStored !== undefined) {
   setColorPrimary(colorStored)
 }
 const menuButton = document.querySelector('[data-test-selector="user-menu__toggle"]')
+
 menuButton.addEventListener('click', () => {
-  setTimeout(() => {
+  const myInterval = setInterval(() =>{
+    if(document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')){
+      clearInterval(myInterval)
+      if(!document.getElementById('hue-range')){
+        render()
+      }
+    }
+  }, 100)
+
+  function render() {
     const menuWrapper = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')
     const darkThemeOption = menuWrapper.querySelector('.Layout-sc-nxg1ff-0.FTFzP').children[2]
     const div = document.createElement('div')
@@ -40,8 +50,10 @@ menuButton.addEventListener('click', () => {
       localStorage.setItem('color-picked', hue)
       r.style.setProperty('--primary-color-num', hue)
     }
-  }, 300)
+  }
+
 })
+
 
 function setColorPrimary(hue) {
   r.style.setProperty('--primary-color-num', hue)
