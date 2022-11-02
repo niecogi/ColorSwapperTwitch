@@ -6,10 +6,10 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "scripting"],
   "content_scripts": [
     {
-      "matches":["https://www.twitch.tv/*","https://www.dashboard.twitch.tv/*" ],
+      "matches":["https://www.twitch.tv/*" ],
       "js": ["setTheme.js"],
       "css": ["hue.css", "theme.css"]
     }

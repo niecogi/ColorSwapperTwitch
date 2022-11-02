@@ -8,7 +8,7 @@ const menuButton = document.querySelector('[data-test-selector="user-menu__toggl
 
 menuButton.addEventListener('click', () => {
   const myInterval = setInterval(() =>{
-    if(document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')){
+    if(document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]') ){
       clearInterval(myInterval)
       if(!document.getElementById('hue-range')){
         render()
@@ -60,9 +60,11 @@ function setColorPrimary(hue) {
   if (hue <= 193 && hue >= 25) {
     r.style.setProperty('--color-text-button-primary', 'var(--primary-color-5)')
     r.style.setProperty('--primary-color-6', 'var(--primary-color-5)')
+    r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-8)')
   } else {
     r.style.setProperty('--color-text-button-primary', 'var(--color-white)')
     r.style.setProperty('--primary-color-6', 'var(--color-white)')
+    r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-3')
   }
 }
 

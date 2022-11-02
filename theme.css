@@ -8,10 +8,12 @@
   --primary-color-2-alpha: hsla(var(--primary-color-num), 92%, 86%, 0.6);
   --primary-color-3: hsl(var(--primary-color-num), 92%, 70%);
   --primary-color-4: hsl(var(--primary-color-num), 92%, 65%);
+  --primary-color-8: hsl(var(--primary-color-num), 92%, 25%);
   --primary-color-5: hsl(var(--primary-color-num), 100%, 19%);
   --primary-color-6: hsl(var(--primary-color-num), 100%, 19%);
   --primary-color-7: hsl(var(--primary-color-num), 100%, 35%);
   --color-more-light: var(--primary-color-7);
+  --color-fill-light-svg: none
 }
 
 .twitch-theme.tw-root--theme-dark,
@@ -58,6 +60,7 @@
   --color-background-info: var(--primary-color-1);
   --color-text-overlay: var(--color-white)
 }
+
 .twitch-theme.tw-root--theme-light,
 .twitch-theme .tw-root--theme-light {
   --color-fill-current: var(--primary-color-2);
@@ -101,6 +104,21 @@
   --color-text-overlay: var(--color-white)
 }
 
+.twitch-theme.tw-root--theme-light [data-a-target="top-nav-container"] svg,
+.twitch-theme .tw-root--theme-light [data-a-target="top-nav-container"]  svg,
+.twitch-theme .tw-root--theme-light [aria-label="Socio verificado"] svg,
+.twitch-theme .tw-root--theme-light [aria-label="Verified Partner"] svg,
+.tw-root--theme-light [data-test-selector="user-menu-dropdown__main-menu"] svg
+{
+  fill: var(--color-fill-light-svg) !important;
+}
+
+.twitch-theme.tw-root--theme-light [class*="vertical-selector-card"] p,
+.twitch-theme .tw-root--theme-light [class*="vertical-selector-card"] p
+{
+  color:var(--primary-color-6)
+}
+
 .twitch-theme.tw-root--theme-dark [aria-label="User Menu Options"] svg,
 .twitch-theme.tw-root--theme-light [aria-label="User Menu Options"] svg {
   fill: var(--primary-color-2);
@@ -127,14 +145,23 @@
 }
 
 
-.twitch-theme.tw-root--theme-dark [data-test-selector="chat-reply-button"] svg {
+.twitch-theme.tw-root--theme-dark [data-test-selector="chat-reply-button"] svg
+{
   fill: var(--primary-color-2);
 }
+.twitch-theme.tw-root--theme-light [data-test-selector="chat-reply-button"] svg{
+  fill: var(--color-fill-light-svg);
 
-.twitch-theme.tw-root--theme-dark [data-test-selector="user-menu__dark-mode-toggle"] > label {
+}
+
+/*
+.twitch-theme.tw-root--theme-dark [data-test-selector="user-menu__dark-mode-toggle"] > label
+{
   color: var(--primary-color-2);
   filter: drop-shadow(0.5px 0.5px 1.8px var(--primary-color-5))  !important
 }
+
+ */
 
 
 
