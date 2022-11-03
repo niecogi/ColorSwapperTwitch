@@ -13,7 +13,7 @@
   --primary-color-6: hsl(var(--primary-color-num), 100%, 19%);
   --primary-color-7: hsl(var(--primary-color-num), 100%, 35%);
   --color-more-light: var(--primary-color-7);
-  --color-fill-light-svg: none
+  --color-fill-light-svg: var(--primary-color-8)
 }
 
 .twitch-theme.tw-root--theme-dark,
