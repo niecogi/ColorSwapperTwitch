@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Color Swapper for Twitch™",
   "description": "Replace Twich's purple with a color of your own liking.",
   "version": "1.0",
