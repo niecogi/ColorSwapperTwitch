@@ -36,6 +36,10 @@ menuButton.addEventListener('click', () => {
     range.max = 360
     colorStored = localStorage.getItem('color-picked')
 
+    if(colorStored === undefined){
+      range.value = '350'
+    }
+
     range.value = colorStored
     onHuePicked(colorStored)
 
@@ -60,12 +64,14 @@ function setColorPrimary(hue) {
     r.style.setProperty('--primary-color-6', 'var(--primary-color-5)')
     r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-8)')
     r.style.setProperty('--color-background-tag-hover', 'var(--primary-color-7)')
+    r.style.setProperty('--color-text-button-overlay-primary', 'var(--primary-color-7)')
 
   } else {
     r.style.setProperty('--color-text-button-primary', 'var(--color-white)')
     r.style.setProperty('--primary-color-6', 'var(--color-white)')
     r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-3')
     r.style.setProperty('--color-background-tag-hover', 'var(--primary-color-2)')
+    r.style.setProperty('--color-text-button-overlay-primary', 'var(--primary-color-3)')
   }
 }
 
