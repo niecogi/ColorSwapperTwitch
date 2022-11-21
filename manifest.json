@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Color Swapper for Twitch™",
   "description": "Replace Twich's purple with a color of your own liking.",
-  "version": "1.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "matches":["https://www.twitch.tv/*" ],
