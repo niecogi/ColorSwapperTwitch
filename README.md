@@ -13,4 +13,9 @@
 5. Enjoy your custom twitch! 😄
 
 
+## Thank You! 
+Made with ❤ by [@nievescodes](https://twitter.com/NievesCodes)
+
+If you find this repository helpful, please give it a ⭐
+You can also rate and leave a comment on the extension page 😊
 
