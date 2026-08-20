@@ -143,12 +143,19 @@
 }
 
 .twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"] {
+  background-color: var(--primary-color-2) !important;
   color: var(--primary-color-6) !important;
   border-color: var(--primary-color-2) !important;
 }
 
 .twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"] svg {
   fill: var(--primary-color-6) !important;
+}
+
+.twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"]:hover,
+.twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"]:active {
+  background-color: var(--primary-color-3) !important;
+  border-color: var(--primary-color-3) !important;
 }
 
 
