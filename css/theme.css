@@ -210,3 +210,8 @@
 .twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0.gZaqky > a{
   color: var(--primary-color-6) !important;
 }
+
+.twitch-theme [class*="offline-recommendations-video-card-border"] {
+  border-color: var(--primary-color-2) !important;
+  background-color: var(--primary-color-2) !important;
+}
