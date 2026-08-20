@@ -18,7 +18,7 @@ menuButton.addEventListener('click', () => {
 
 
   function render() {
-    const menu = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"] .simplebar-content > :only-child')
+    const menu = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"] > div > div')
     let options = Array.from(menu.childNodes)
     let darkModeOption = options.filter(n => n.querySelector('[data-test-selector="user-menu__dark-mode-toggle"]') != null)[0]
     const div = document.createElement('div')
