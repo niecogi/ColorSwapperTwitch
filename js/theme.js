@@ -1,7 +1,8 @@
 document.querySelector('html').classList.add('twitch-theme')
 const r = document.querySelector(':root')
+const defaultHue = '350'
 let colorStored = localStorage.getItem('color-picked')
-if (colorStored !== undefined) {
+if (colorStored !== null) {
   setColorPrimary(colorStored)
 }
 const menuButton = document.querySelector('[data-test-selector="user-menu__toggle"]')
@@ -35,12 +36,7 @@ menuButton.addEventListener('click', () => {
     range.type = 'range'
     range.min = 0
     range.max = 360
-    colorStored = localStorage.getItem('color-picked')
-
-    if(colorStored === undefined){
-      range.value = '350'
-    }
-
+    colorStored = localStorage.getItem('color-picked') ?? defaultHue
     range.value = colorStored
     onHuePicked(colorStored)
 
