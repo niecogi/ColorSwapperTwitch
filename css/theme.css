@@ -13,7 +13,7 @@
   --primary-color-6: hsl(var(--primary-color-num), 100%, 19%);
   --primary-color-7: hsl(var(--primary-color-num), 100%, 35%);
   --color-more-light: var(--primary-color-7);
-  --color-fill-light-svg: none
+  --color-fill-light-svg: var(--primary-color-8)
 }
 
 .twitch-theme.tw-root--theme-dark,
@@ -209,4 +209,33 @@
 .twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0.vertical-selector-card__container.vertical-selector-card__container--lg > a,
 .twitch-theme.tw-root--theme-dark .Layout-sc-nxg1ff-0.gZaqky > a{
   color: var(--primary-color-6) !important;
+}
+
+.twitch-theme [class*="offline-recommendations-video-card-border"] {
+  border-color: var(--primary-color-2) !important;
+  background-color: var(--primary-color-2) !important;
+}
+
+.twitch-theme [class*="tw-toggle__button"]:hover {
+  border-color: var(--primary-color-2) !important;
+  background-color: var(--primary-color-2) !important;
+}
+
+.twitch-theme [class*="tw-toggle__button"]:hover svg {
+  fill: var(--color-fill-light-svg) !important;
+}
+
+.twitch-theme [class*="activeBackground"] {
+  background-color: var(--primary-color-2) !important;
+  color: var(--primary-color-5) !important;
+}
+
+.twitch-theme [class*="activeBackground"] p,
+.twitch-theme [class*="activeBackground"] svg {
+  color: var(--primary-color-5) !important;
+  fill: var(--primary-color-5) !important;
+}
+
+.twitch-theme [class*="tw-progress-bar"] [class*="ProgressBarFill"] {
+  background-color: var(--primary-color-2) !important;
 }

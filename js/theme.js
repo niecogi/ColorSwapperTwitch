@@ -1,7 +1,8 @@
 document.querySelector('html').classList.add('twitch-theme')
 const r = document.querySelector(':root')
+const defaultHue = '350'
 let colorStored = localStorage.getItem('color-picked')
-if (colorStored !== undefined) {
+if (colorStored !== null) {
   setColorPrimary(colorStored)
 }
 const menuButton = document.querySelector('[data-test-selector="user-menu__toggle"]')
@@ -18,11 +19,12 @@ menuButton.addEventListener('click', () => {
 
 
   function render() {
-    const menuWrapper = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"]')
-    const darkThemeOption = menuWrapper.querySelector('.Layout-sc-nxg1ff-0.FTFzP').children[2]
+    const menu = document.querySelector('[data-test-selector="user-menu-dropdown__main-menu"] > div > div')
+    let options = Array.from(menu.childNodes)
+    let darkModeOption = options.filter(n => n.querySelector('[data-test-selector="user-menu__dark-mode-toggle"]') != null)[0]
     const div = document.createElement('div')
     const stringHTML = `<div id="hue" class="hue"></div>`
-    darkThemeOption.after(div)
+    darkModeOption.after(div)
     div.innerHTML = stringHTML
 
     let parent = document.getElementById('hue')
@@ -34,8 +36,7 @@ menuButton.addEventListener('click', () => {
     range.type = 'range'
     range.min = 0
     range.max = 360
-    colorStored = localStorage.getItem('color-picked')
-
+    colorStored = localStorage.getItem('color-picked') ?? defaultHue
     range.value = colorStored
     onHuePicked(colorStored)
 
@@ -55,14 +56,19 @@ menuButton.addEventListener('click', () => {
 
 function setColorPrimary(hue) {
   r.style.setProperty('--primary-color-num', hue)
-  if (hue <= 193 && hue >= 25) {
+  if (hue <= 200 && hue >= 25) {
     r.style.setProperty('--color-text-button-primary', 'var(--primary-color-5)')
     r.style.setProperty('--primary-color-6', 'var(--primary-color-5)')
     r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-8)')
+    r.style.setProperty('--color-background-tag-hover', 'var(--primary-color-7)')
+    r.style.setProperty('--color-text-button-overlay-primary', 'var(--primary-color-7)')
+
   } else {
     r.style.setProperty('--color-text-button-primary', 'var(--color-white)')
     r.style.setProperty('--primary-color-6', 'var(--color-white)')
     r.style.setProperty('--color-fill-light-svg', 'var(--primary-color-3')
+    r.style.setProperty('--color-background-tag-hover', 'var(--primary-color-2)')
+    r.style.setProperty('--color-text-button-overlay-primary', 'var(--primary-color-3)')
   }
 }
 
