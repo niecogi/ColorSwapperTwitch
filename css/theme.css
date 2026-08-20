@@ -178,6 +178,15 @@
   background: var(--primary-color-2) !important;
 }
 
+.twitch-theme [data-a-target="player-seekbar"] [data-test-selector="seekbar-segment__segment"] {
+  background-color: var(--primary-color-2) !important;
+}
+
+.twitch-theme [data-a-target="player-seekbar"] [role="slider"] {
+  background-color: var(--primary-color-2) !important;
+  border-color: var(--primary-color-2) !important;
+}
+
 .twitch-theme.tw-root--theme-dark a::before,
 .twitch-theme.tw-root--theme-light a::before
 {
