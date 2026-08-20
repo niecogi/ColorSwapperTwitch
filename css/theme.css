@@ -142,6 +142,15 @@
   fill: var(--primary-color-6) !important;
 }
 
+.twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"] {
+  color: var(--primary-color-6) !important;
+  border-color: var(--primary-color-2) !important;
+}
+
+.twitch-theme [data-a-target="gift-button"][data-test-selector="subscribe-button__dropdown"] svg {
+  fill: var(--primary-color-6) !important;
+}
+
 
 .twitch-theme.tw-root--theme-dark [aria-label="next"] svg,
 .twitch-theme.tw-root--theme-light [aria-label="next"] svg {
