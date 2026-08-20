@@ -224,3 +224,18 @@
 .twitch-theme [class*="tw-toggle__button"]:hover svg {
   fill: var(--color-fill-light-svg) !important;
 }
+
+.twitch-theme [class*="activeBackground"] {
+  background-color: var(--primary-color-2) !important;
+  color: var(--primary-color-5) !important;
+}
+
+.twitch-theme [class*="activeBackground"] p,
+.twitch-theme [class*="activeBackground"] svg {
+  color: var(--primary-color-5) !important;
+  fill: var(--primary-color-5) !important;
+}
+
+.twitch-theme [class*="tw-progress-bar"] [class*="ProgressBarFill"] {
+  background-color: var(--primary-color-2) !important;
+}
